@@ -274,7 +274,7 @@ class RNSClient:
         if rns_address.startswith("/"):
             resource_uri = self.resource_uri(name)
             logger.info(f"Attempting to load config for {rns_address} from RNS.")
-            uri = "resource/" + resource_uri
+            uri = f"resource/" + resource_uri
             resp = requests.get(
                 f"{self.api_server_url}/{uri}", headers=self.request_headers
             )
